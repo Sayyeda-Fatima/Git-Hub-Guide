@@ -1,9 +1,30 @@
+html{
+    font-family: 'Roboto Serif', serif;
+    font-size: 25px;
+}
+
 header{
-    background-color: linear-gradient(to right, rgb(22, 92, 220), rgb(90, 144, 231), rgb(71, 190, 230));
+    background-image: url(resources/header\ background.jpg);
+    padding: 5px;
+    border-radius: 2px;
+}
+header h1{
     text-align: center;
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
 }
 
 img{
     padding-top: 5px;
+    margin: 5px;
     border: solid;
 }
+
+.command{
+    text-align: center;
+    font-size: 200%;
+}
+

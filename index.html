@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guide to Git</title>
     <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <h1>An easy guide to Git</h1>
@@ -14,38 +17,52 @@
         <p>This is a beginer friendly guide to Git.</p>
     </header>
 
-    <h2>What is Git?</h2>
-    <p>Git is a  
-       <a href="https://en.wikipedia.org/wiki/Distributed_version_control" target="_blank">Distributed Version Control System</a>. 
-       In addition to being distributed, Git has been designed with performance, 
-       security and flexibility in mind.<br>
-       In this tutorial we will see some important Git commands and concepts that every beginer should know. <br><br>
-       Let's begin then:
+    <div class="git-def">
+        <h2>What is Git?</h2>
+        <p>Git is a
+            <a href="https://en.wikipedia.org/wiki/Distributed_version_control" target="_blank">Distributed Version
+                Control System</a>.
+            In addition to being distributed, Git has been designed with performance,
+            security and flexibility in mind.<br>
+            In this tutorial we will see some important Git commands and concepts that every beginer should know.
+            <br><br>
+            Let's begin then:
 
-       First of all you will need to 
-       <a href="https://www.atlassian.com/git/tutorials/install-git#windows" target="_balnk">download and install</a>
-       Git on your computer. Once you have installed git now you can create local repisitories and start your version control.
-    </p>
+            First of all you will need to
+            <a href="https://www.atlassian.com/git/tutorials/install-git#windows" target="_balnk">download and
+                install</a>
+            Git on your computer. Once you have installed git now you can create local repisitories and start your
+            version control.
+        </p>
+    </div>
+
 
     <h2>Repository:</h2>
-    <p>The first and most common concept of Git is repositories. All the file versions are saved in a repository. In simple words it is a folder that stores all the version and history of changes in our code.<br><br></p>
-    
-    <h2>Creating a Git Repository</h2>
-    <p>To create a repository, you can press right click on mouse, press new from the menu and create a folder and open that folder in Command line terminal. Then we use command : </p>
+    <p>The first and most common concept of Git is repositories. All the file versions are saved in a repository. In
+        simple words it is a folder that stores all the version and history of changes in our code.<br><br></p>
 
-    <p><b>git init</b></p>
+    <h2>Creating a Git Repository</h2>
+    <p>To create a repository, you can press right click on mouse, press new from the menu and create a folder and open
+        that folder in Command line terminal. Then we use command : </p>
+
+    <p class="command"><b>git init</b></p><br>
     <div class="image-container">
-        <img src="resources/creating a folder.png" alt="creating a folder image here" height="30%" width="50%">
+        <img src="resources/creating a folder.png" alt="creating a folder image here" height="30%" width="40%">
     </div>
-    
-    <p>After creating the folder open it and again press right click on mouse. Choose <b>"Open in terminal"</b> from menu. It will open a command line prompt in your folder. Now you can write <b>" git init "</b> command and initialize a git repository in that folder.</p>
+
+    <p>After creating the folder open it and again press right click on mouse. Choose <b>"Open in terminal"</b> from
+        menu. It will open a command line prompt in your folder. Now you can write <b>" git init "</b> command and
+        initialize a git repository in that folder.</p><br>
     <div class="image-container">
-        <img src="resources/open in terminal.png" alt="open in terminal image here" height="50%" width="50%"><br><br>
+        <img src="resources/open in terminal.png" alt="open in terminal image here" height="70%" width="40%"><br><br>
         <img src="resources/git init.png" alt="git init image here" height="50%" width="50%">
     </div>
 
     <br>
-    <p>Now we have succesfully initialized a git repository in our folder. When we intialize a git repository in a folder a <b>" .git "</b> folder is created in our original folder and that .git folder is our repository but is hidden mostly.</p>
+    <p>Now we have succesfully initialized a git repository in our folder. When we intialize a git repository in a
+        folder a <b>" .git "</b> folder is created in our original folder and that .git folder is our repository but is
+        hidden mostly.</p>
 
 </body>
+
 </html>
