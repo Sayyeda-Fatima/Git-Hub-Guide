@@ -11,13 +11,15 @@
 </head>
 
 <body>
+
     <header>
+        <img src="resources/git logo.png" alt="git logo here" id="git-logo">
         <h1>An easy guide to Git</h1>
         <h3>Introduction</h3>
         <p>This is a beginer friendly guide to Git.</p>
     </header>
 
-    <div class="git-def">
+    <div class="content">
         <h2>What is Git?</h2>
         <p>Git is a
             <a href="https://en.wikipedia.org/wiki/Distributed_version_control" target="_blank">Distributed Version
@@ -34,34 +36,108 @@
             Git on your computer. Once you have installed git now you can create local repisitories and start your
             version control.
         </p>
+
+        <h2>Importance of Git:</h2>
+        <p>
+            Git is very important for programmers ass it allows them to save changes in every version and keep a
+            histrory of these changes in
+            case they want to return to previous version when error occurs. Also it allows user to collebrate with other
+            people as all people can have same
+            code and will save changes to same repository, so, anyone can see these changes.
+        </p>
+
+
+        <h2>Repository:</h2>
+        <p>The first and most common concept of Git is repositories. All the file versions are saved in a repository. In
+            simple words it is a folder that stores all the version and history of changes in our code.<br><br></p>
+
+        <h2>Creating a Git Repository</h2>
+        <p>To create a repository, you can press right click on mouse, press new from the menu and create a folder and
+            open
+            that folder in Command line terminal. Then we use following command to make a git repository in required
+            folder : </p>
+
+        <p class="command"><b>-git init-</b></p><br>
+        <div class="image-container">
+            <img src="resources/creating a folder.png" alt="creating a folder image here" height="30%" width="40%">
+        </div>
+
+        <p>After creating the folder open it and again press right click on mouse. Choose <b>"Open in terminal"</b> from
+            menu. It will open a command line prompt in your folder. Now you can write <b>" git init "</b> command and
+            initialize a git repository in that folder.</p><br>
+        <div class="image-container">
+            <img src="resources/open in terminal.png" alt="open in terminal image here" height="70%"
+                width="100%"><br><br>
+        </div>
+        <div class="image-container">
+            <img src="resources/git init.png" alt="git init image here" height="50%" width="100%">
+        </div>
+
+        <br>
+        <p>Now we have succesfully initialized a git repository in our folder. When we intialize a git repository in a
+            folder a <b>" .git "</b> folder is created in our original folder and that .git folder is our repository but
+            is
+            hidden mostly.</p>
+
+        <h2>Staging area:</h2>
+        <p>
+            Staging area is a temporary place where every file that we want to add to our repository must stay before
+            commiting it to
+            repository. It lets git know what changes in the file are going to occur. We can add our files to git
+            staging area by using command:
+        </p>
+
+        <p class="command"><b>-git add-</b></p>
+
+        <p>We can use git add command with '.' to add all files to staging area or we can give name of the file to add
+            to staging area.</p>
+        <div class="image-container">
+            <img src="resources/git add..png" alt="git init image here" height="50%" width="100%">
+        </div>
+        <p style="text-align: center;">or</p>
+        <div class="image-container">
+            <img src="resources/git add filename.png" alt="git init image here" height="50%" width="100%">
+        </div>
+
+        <p>To see if our files are added to staging area or not, or even to see status or condition of our repository at
+            anytime we use
+            <b style="color: red; font-size: 150%">-git status-</b> command.
+        </p>
+        <div class="image-container">
+            <img src="resources/git status.png" alt="git init image here" height="50%" width="100%">
+        </div>
+
+        <p>Here the green files show that they are currently in staging area. If we modify a file it will show in red
+            which means that we need to add those files to staging area e.g:
+        </p>
+        <div class="image-container">
+            <img src="resources/git status2.png" alt="git init image here" height="50%" width="100%">
+        </div>
+        <p>
+            In the above example you can see that when we change in file1.txt it shows in red and have a status of modified. 
+            Now we have to again -git add- to add to staging area.
+        </p>
+
+        <h2>Commiting Files to Repository</h2>
+        <p>Here we need to remember that -git add- only adds our files to staging area and not to our repository directly. To
+            add our files from staging area to repository, we use following command:
+        </p>
+        <p class="command"><b>-git commit -m ""-</b></p>
+
+        <p>Where <b style="color: rgb(9, 103, 9);">-m</b> is used to add a appropriate message to our commit.</p>
+        <div class="image-container">
+            <img src="resources/git commit.png" alt="git init image here" height="50%" width="100%">
+        </div>
+        <p>Now if we use -git status- it will show us that our reposoitory is up to date and there are no new or modified files in our 
+            staging area to be commited.
+        </p>
+        <div class="image-container">
+            <img src="resources/git status commit.png" alt="git init image here" height="50%" width="100%">
+        </div>
+
+        <p>As we can see on -git status- it tells us that there is noting to commit.</p>
+
     </div>
-
-
-    <h2>Repository:</h2>
-    <p>The first and most common concept of Git is repositories. All the file versions are saved in a repository. In
-        simple words it is a folder that stores all the version and history of changes in our code.<br><br></p>
-
-    <h2>Creating a Git Repository</h2>
-    <p>To create a repository, you can press right click on mouse, press new from the menu and create a folder and open
-        that folder in Command line terminal. Then we use command : </p>
-
-    <p class="command"><b>git init</b></p><br>
-    <div class="image-container">
-        <img src="resources/creating a folder.png" alt="creating a folder image here" height="30%" width="40%">
-    </div>
-
-    <p>After creating the folder open it and again press right click on mouse. Choose <b>"Open in terminal"</b> from
-        menu. It will open a command line prompt in your folder. Now you can write <b>" git init "</b> command and
-        initialize a git repository in that folder.</p><br>
-    <div class="image-container">
-        <img src="resources/open in terminal.png" alt="open in terminal image here" height="70%" width="40%"><br><br>
-        <img src="resources/git init.png" alt="git init image here" height="50%" width="50%">
-    </div>
-
-    <br>
-    <p>Now we have succesfully initialized a git repository in our folder. When we intialize a git repository in a
-        folder a <b>" .git "</b> folder is created in our original folder and that .git folder is our repository but is
-        hidden mostly.</p>
 
 </body>
 

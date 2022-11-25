@@ -3,18 +3,38 @@ html{
     font-size: 25px;
 }
 
+body{
+    background-color: antiquewhite;
+}
+
 header{
     background-image: url(resources/header\ background.jpg);
     padding: 5px;
     border-radius: 2px;
 }
+
 header h1{
     text-align: center;
+}
+
+#git-logo{
+    max-width: 100px;
+    border: none;
+}
+
+.content{
+    max-width: 800px;
+    margin: auto;
+    background-color: rgb(202, 193, 193);
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 3px;
 }
 
 .image-container{
     display: flex;
     justify-content: center;
+    padding: 10px;
 }
 
 img{
