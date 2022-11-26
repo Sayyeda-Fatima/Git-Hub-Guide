@@ -92,11 +92,11 @@
         <p>We can use git add command with '.' to add all files to staging area or we can give name of the file to add
             to staging area.</p>
         <div class="image-container">
-            <img src="resources/git add..png" alt="git init image here" height="50%" width="100%">
+            <img src="resources/git add..png" alt="git add image here" height="50%" width="100%">
         </div>
         <p style="text-align: center;">or</p>
         <div class="image-container">
-            <img src="resources/git add filename.png" alt="git init image here" height="50%" width="100%">
+            <img src="resources/git add filename.png" alt="git add filename image here" height="50%" width="100%">
         </div>
 
         <p>To see if our files are added to staging area or not, or even to see status or condition of our repository at
@@ -104,41 +104,157 @@
             <b style="color: red; font-size: 150%">-git status-</b> command.
         </p>
         <div class="image-container">
-            <img src="resources/git status.png" alt="git init image here" height="50%" width="100%">
+            <img src="resources/git status.png" alt="git status image here" height="50%" width="100%">
         </div>
 
         <p>Here the green files show that they are currently in staging area. If we modify a file it will show in red
             which means that we need to add those files to staging area e.g:
         </p>
         <div class="image-container">
-            <img src="resources/git status2.png" alt="git init image here" height="50%" width="100%">
+            <img src="resources/git status2.png" alt="git status2 image here" height="50%" width="100%">
         </div>
         <p>
-            In the above example you can see that when we change in file1.txt it shows in red and have a status of modified. 
+            In the above example you can see that when we change in file1.txt it shows in red and have a status of
+            modified.
             Now we have to again -git add- to add to staging area.
         </p>
 
         <h2>Commiting Files to Repository</h2>
-        <p>Here we need to remember that -git add- only adds our files to staging area and not to our repository directly. To
+        <p>Here we need to remember that -git add- only adds our files to staging area and not to our repository
+            directly. To
             add our files from staging area to repository, we use following command:
         </p>
         <p class="command"><b>-git commit -m ""-</b></p>
 
         <p>Where <b style="color: rgb(9, 103, 9);">-m</b> is used to add a appropriate message to our commit.</p>
         <div class="image-container">
-            <img src="resources/git commit.png" alt="git init image here" height="50%" width="100%">
+            <img src="resources/git commit.png" alt="git commit image here" height="50%" width="100%">
         </div>
-        <p>Now if we use -git status- it will show us that our reposoitory is up to date and there are no new or modified files in our 
+        <p>Now if we use -git status- it will show us that our reposoitory is up to date and there are no new or
+            modified files in our
             staging area to be commited.
         </p>
         <div class="image-container">
-            <img src="resources/git status commit.png" alt="git init image here" height="50%" width="100%">
+            <img src="resources/git status commit.png" alt="git status commit image here" height="50%" width="100%">
         </div>
 
         <p>As we can see on -git status- it tells us that there is noting to commit.</p>
 
+        <h2>Branches:</h2>
+        <p>
+            Git branches are effectively a pointer to a snapshot of your changes. When you want to add a new feature or
+            fix a bug —no
+            matter how big or how small— you create a new branch to encapsulate your changes so that if that new feautre
+            or code create
+            some fatal error your original code is still safe in your main branch. <br>
+            You can use following command to see branches in your repository:
+        </p>
+        <p class="command"><b>-git branch-</b></p>
+        <div class="image-container">
+            <img src="resources/git branch.png" alt="git barnch image here" height="50%" width="100%">
+        </div>
+        <p>The star symbol in the start of branch name shows that it the current working branch, means all the changes
+            will be stored to this branch.
+            Branch <span style="color: rgba(44, 149, 24, 0.758);">master</span> is made by default when we initiate our
+            repository and work as our main branch.
+        </p>
+
+        <h3>Creating a new branch:</h3>
+        <p>To create a new branch we use following command:</p>
+        <p class="command"><b>-git checkout -b name-</b></p>
+        <p>where name is the name of new branch. <br><br> Here we use <b>-git checkout-</b> command to move to new
+            branch and <b>-b</b> attribute is used to create new
+            branch and then move to it.
+        </p>
+        <div class="image-container">
+            <img src="resources/git chekout.png" alt="git checkout image here" height="50%" width="100%">
+        </div>
+        <p>
+            As you can see we have created new branches and are now currently at branch3.
+            <br><span style="color: red;"> Important Note:</span> All these branches will have same code, as master
+            branch, on creation.
+            <br>
+        <h3>Moving to another branch:</h3>
+        Now if you want to move back to master branch or some other branch you can use -git checkout- without -b
+        attribute:
+        </p>
+        <div class="image-container">
+            <img src="resources/git checkout2.png" alt="git checkout2 here" height="50%" width="100%">
+        </div>
+
+        <h2 style="text-align: center;">Git Hub</h2>
+        <p>
+            Now that we have learned some of the basic it we can now learn about <b>Git Hub</b>, a platform for version
+            control. <br>
+            <a href="https://github.com/">Git Hub</a> is a online platform that helps programmers to manage repositories
+            online.
+        </p>
+        <a href="https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account"
+            style="font-size: 15px;">How to create a Git Hub account</a>
+        <br>
+        <a href="https://docs.github.com/en/get-started/quickstart/create-a-repo" style="font-size: 15px;">How to create
+            a repository on Git Hub</a>
+
+        <p>The repositories on Git Hub are refferd to as remote repositories. We can push data from our local repository
+            on our device to our remote repository on Git Hub.</p>
+
+        <h3>How to Push to Remote Reposoitory</h3>
+        <p>To push data to remote repository we first need to link our local repository to our remote repository on Git
+            Hub. To do this we use following command:</p>
+        <p class="command"><b>-git remote add origin url-</b></p>
+        <p>where url is the url link of your repository.</p>
+        <div class="image-container">
+            <img src="resources/linking repo.png" alt="linking repo image here" height="50%" width="100%">
+        </div>
+        <p>Now to push files to our remote repository we use command:</p>
+        <p class="command"><b>-git push -u origin main-</b></p>
+        <p>where main is name of master branch.</p>
+        <div class="image-container">
+            <img src="resources/rename master.png" alt="rename master image here" height="50%" width="100%">
+        </div>
+        <p>We use main as Git Hub do not allow to push masrter branch.</p>
+        <div class="image-container">
+            <img src="resources/git push.png" alt="git push image here" height="50%" width="100%">
+        </div>
+        <p>Now your local repository is saved to your Git Hub repository.<br><br>Notice that you have to push to your
+            remote repository every time you commit so your cahnges will be saved to local repository too.</p>
+
+        <br><br>
+        <p>And this is how programmers can keep record of code progress and collaborate with each other easily using git
+            and git hub.</p>
+
+        
+    </div>
+
+    <div class="fotter">
+        <h2>Overview:</h2>
+        <ol>
+            <li>
+                <b>git init</b> : To initialize a git repository in your folder.
+            </li>
+            <li>
+                <b>git add . </b>: To add files to staging area.
+            </li>
+            <li>
+                <b>git commit -m ""</b> : To save files in local repository.
+            </li>
+            <li>
+                <b>git branch</b> : To see all the branches in our repository.
+            </li>
+            <li>
+                <b>git checkout -b</b> : To create a new branch in our repository.
+            </li>
+            <li>
+                <b>git checkout</b> : To move from one branch to another.
+            </li>
+            <li>
+                <b>git remote add origin</b> : To link our local repository to remote repository on Git Hub.
+            </li>
+            <li>
+                <b>git push -u origin</b> : To push files from local repository to remote repository on Git Hub.
+            </li>
+        </ol>
     </div>
 
 </body>
-
 </html>

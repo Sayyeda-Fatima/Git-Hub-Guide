@@ -48,3 +48,9 @@ img{
     font-size: 200%;
 }
 
+.fotter{
+    background-color: rgb(234, 196, 125);
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 15px;
+}
