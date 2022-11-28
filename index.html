@@ -49,9 +49,9 @@
 
         <h2>Repository:</h2>
         <p>The first and most common concept of Git is repositories. All the file versions are saved in a repository. In
-            simple words it is a folder that stores all the version and history of changes in our code.<br><br></p>
+            simple words it is a folder that stores all the version and history of changes in our code. Our git repository is also called our local repository.<br><br></p>
 
-        <h2>Creating a Git Repository</h2>
+        <h2 id="creating-repo">Creating a Git Repository</h2>
         <p>To create a repository, you can press right click on mouse, press new from the menu and create a folder and
             open
             that folder in Command line terminal. Then we use following command to make a git repository in required
@@ -62,7 +62,7 @@
             <img src="resources/creating a folder.png" alt="creating a folder image here" height="30%" width="40%">
         </div>
 
-        <p>After creating the folder open it and again press right click on mouse. Choose <b>"Open in terminal"</b> from
+        <p id="terminal-in-folder">After creating the folder open it and again press right click on mouse. Choose <b>"Open in terminal"</b> from
             menu. It will open a command line prompt in your folder. Now you can write <b>" git init "</b> command and
             initialize a git repository in that folder.</p><br>
         <div class="image-container">
@@ -79,7 +79,7 @@
             is
             hidden mostly.</p>
 
-        <h2>Staging area:</h2>
+        <h2 id="git-add">Staging area:</h2>
         <p>
             Staging area is a temporary place where every file that we want to add to our repository must stay before
             commiting it to
@@ -99,7 +99,7 @@
             <img src="resources/git add filename.png" alt="git add filename image here" height="50%" width="100%">
         </div>
 
-        <p>To see if our files are added to staging area or not, or even to see status or condition of our repository at
+        <p id="git-status">To see if our files are added to staging area or not, or even to see status or condition of our repository at
             anytime we use
             <b style="color: red; font-size: 150%">-git status-</b> command.
         </p>
@@ -119,7 +119,7 @@
             Now we have to again -git add- to add to staging area.
         </p>
 
-        <h2>Commiting Files to Repository</h2>
+        <h2 id="git-commit">Commiting Files to Repository</h2>
         <p>Here we need to remember that -git add- only adds our files to staging area and not to our repository
             directly. To
             add our files from staging area to repository, we use following command:
@@ -149,7 +149,7 @@
             some fatal error your original code is still safe in your main branch. <br>
             You can use following command to see branches in your repository:
         </p>
-        <p class="command"><b>-git branch-</b></p>
+        <p class="command" id="see-branch"><b>-git branch-</b></p>
         <div class="image-container">
             <img src="resources/git branch.png" alt="git barnch image here" height="50%" width="100%">
         </div>
@@ -159,7 +159,7 @@
             repository and work as our main branch.
         </p>
 
-        <h3>Creating a new branch:</h3>
+        <h3 id="create-new-branch">Creating a new branch:</h3>
         <p>To create a new branch we use following command:</p>
         <p class="command"><b>-git checkout -b name-</b></p>
         <p>where name is the name of new branch. <br><br> Here we use <b>-git checkout-</b> command to move to new
@@ -174,7 +174,7 @@
             <br><span style="color: red;"> Important Note:</span> All these branches will have same code, as master
             branch, on creation.
             <br>
-        <h3>Moving to another branch:</h3>
+        <h3 id="move-to-other-branch">Moving to another branch:</h3>
         Now if you want to move back to master branch or some other branch you can use -git checkout- without -b
         attribute:
         </p>
@@ -198,15 +198,15 @@
         <p>The repositories on Git Hub are refferd to as remote repositories. We can push data from our local repository
             on our device to our remote repository on Git Hub.</p>
 
-        <h3>How to Push to Remote Reposoitory</h3>
+        <h3 >How to Push to Remote Reposoitory</h3>
         <p>To push data to remote repository we first need to link our local repository to our remote repository on Git
             Hub. To do this we use following command:</p>
-        <p class="command"><b>-git remote add origin url-</b></p>
+        <p class="command" id="link-repo"><b>-git remote add origin url-</b></p>
         <p>where url is the url link of your repository.</p>
         <div class="image-container">
             <img src="resources/linking repo.png" alt="linking repo image here" height="50%" width="100%">
         </div>
-        <p>Now to push files to our remote repository we use command:</p>
+        <p id="push-repo">Now to push files to our remote repository we use command:</p>
         <p class="command"><b>-git push -u origin main-</b></p>
         <p>where main is name of master branch.</p>
         <div class="image-container">
@@ -223,35 +223,50 @@
         <p>And this is how programmers can keep record of code progress and collaborate with each other easily using git
             and git hub.</p>
 
-        
+        <h3 id="copy-repo">How to Get Data from Remote Repository</h3>
+        <p>To get data from remote repository we use following command:</p>
+        <p class="command"><b>-git clone-<b></p>
+        <p>This command copies data from our repository and place it to our device local repository.</p>
+        <p><a href="#terminal-in-folder">Open the Command terminal</a> in the directory you want to copy repository to and then use git clone command after <a href="#terminal-in-folder">initialzing git in the folder</a>.</p>
+        <div class="image-container">
+            <img src="resources/git clone.png" alt="git clone image here" height="50%" width="100%">
+        </div>
+
+
     </div>
 
     <div class="fotter">
         <h2>Overview:</h2>
         <ol>
             <li>
-                <b>git init</b> : To initialize a git repository in your folder.
+                <b>git init</b> : To initialize a git repository in your folder.<a href="#creating-repo">See example here</a>
             </li>
             <li>
-                <b>git add . </b>: To add files to staging area.
+                <b>git add . </b>: To add files to staging area.<a href="#git-add">See example here</a>
             </li>
             <li>
-                <b>git commit -m ""</b> : To save files in local repository.
+                <b>git status</b> : T o check the status of our files at anytime, whether they have been added to staging area or local repository or none.<a href="#git-status">See example here</a>
             </li>
             <li>
-                <b>git branch</b> : To see all the branches in our repository.
+                <b>git commit -m ""</b> : To save files in local repository.<a href="#git-commit">See example here</a>
             </li>
             <li>
-                <b>git checkout -b</b> : To create a new branch in our repository.
+                <b>git branch</b> : To see all the branches in our repository.<a href="#see-branch">See example here</a>
             </li>
             <li>
-                <b>git checkout</b> : To move from one branch to another.
+                <b>git checkout -b</b> : To create a new branch in our repository.<a href="#create-new-branch">See example here</a>
             </li>
             <li>
-                <b>git remote add origin</b> : To link our local repository to remote repository on Git Hub.
+                <b>git checkout</b> : To move from one branch to another.<a href="#move-to-other-branch">See example here</a>
             </li>
             <li>
-                <b>git push -u origin</b> : To push files from local repository to remote repository on Git Hub.
+                <b>git remote add origin</b> : To link our local repository to remote repository on Git Hub.<a href="#link-repo">See example here</a>
+            </li>
+            <li>
+                <b>git push -u origin</b> : To push files from local repository to remote repository on Git Hub.<a href="#push-repo">See example here</a>
+            </li>
+            <li>
+                <b>git clone</b> : To copy a git repository.<a href="#copy-repo">See example here</a>
             </li>
         </ol>
     </div>
